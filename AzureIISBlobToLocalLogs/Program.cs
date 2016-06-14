@@ -69,7 +69,7 @@ namespace AzureIISBlobToLocalLogs
                 // We want to fetch all until now, after we will attach and fetch only what's needed.
                 while (iisLogFetchDateTime.CompareTo(DateTime.UtcNow) <= 0)
                 {
-                    string hourPath = GetHourPath(pathElement.Value, iisLogFetchDateTime);
+                    string hourPath = GetHourPath(pathElement.BasePath, iisLogFetchDateTime);
 
                     // Loop over items within the container and output the length and URI.
                     foreach (IListBlobItem item in container.ListBlobs(hourPath, true))
