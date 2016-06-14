@@ -148,7 +148,7 @@ namespace AzureIISBlobToLocalLogs
 
         private static string GetHourPath(string basePath, DateTime dtStart)
         {
-            return basePath + "/" + dtStart.ToString("yyyy/MM/dd/HH");
+            return basePath + "/" + dtStart.ToString("yyyy/MM/dd/HH", CultureInfo.InvariantCulture);
         }
 
         private static long GetPosition(string blobUri)

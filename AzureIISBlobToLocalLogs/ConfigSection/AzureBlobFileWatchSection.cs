@@ -149,13 +149,13 @@ namespace AzureIISBlobToLocalLogs.ConfigSection
             }
         }
 
-        [ConfigurationProperty("value", IsRequired = true)]
-        public string Value
+        [ConfigurationProperty("basePath", IsRequired = true)]
+        public string BasePath
         {
             get
-            { return (string)this["value"]; }
+            { return (string)this["basePath"]; }
             set
-            { this["value"] = value; }
+            { this["basePath"] = value; }
         }
 
         [ConfigurationProperty("container", IsRequired = true)]
