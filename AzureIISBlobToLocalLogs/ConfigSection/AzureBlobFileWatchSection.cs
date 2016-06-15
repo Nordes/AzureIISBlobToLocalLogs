@@ -36,6 +36,19 @@ namespace AzureIISBlobToLocalLogs.ConfigSection
             }
         }
 
+        [ConfigurationProperty("sinceDbPath", IsRequired = false)]
+        public string SinceDbPath
+        {
+            get
+            {
+                return (string)this["sinceDbPath"];
+            }
+            set
+            {
+                this["sinceDbPath"] = value;
+            }
+        }
+
         [ConfigurationProperty("paths", IsDefaultCollection = true)]
         [ConfigurationCollection(typeof(PathElements), AddItemName = "add", ClearItemsName = "clear", RemoveItemName = "remove")]
         public PathElements Paths
