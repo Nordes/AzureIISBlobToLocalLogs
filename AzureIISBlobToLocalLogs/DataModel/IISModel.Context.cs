@@ -25,6 +25,6 @@ namespace AzureIISBlobToLocalLogs.DataModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<highscore> highscores { get; set; }
+        public virtual DbSet<AzureBlobIISLog> AzureBlobIISLogs { get; set; }
     }
 }

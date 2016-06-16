@@ -12,10 +12,15 @@ namespace AzureIISBlobToLocalLogs.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class highscore
+    public partial class AzureBlobIISLog
     {
-        public long Id { get; set; }
-        public string name { get; set; }
-        public Nullable<int> score { get; set; }
+        public string URI { get; set; }
+        public long Position { get; set; }
+        public System.DateTimeOffset Inserted { get; set; }
+        public System.DateTimeOffset Modified { get; set; }
+        public string ETag { get; set; }
+        public System.DateTimeOffset AssociatedDate { get; set; }
+        public string Container { get; set; }
+        public string Account { get; set; }
     }
 }
